@@ -1,0 +1,27 @@
+<!doctype html>
+<html ng-app="angular-sample">
+  <head>
+    <meta charset="utf-8">
+    <title>directive-sample</title>
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body ng-controller="mainController">
+
+    <div class="tile">
+      <tile-item ng-repeat="item in items" item="item"></tile-item>
+    </div>
+    
+    <div class="total">
+      合計金額：<span class="total-price">{{totalPrice | money}}</span>
+    </div>
+    
+    <input type="submit" value="Order!!">
+    
+    <div class="debug-json">{{items | json}}</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/filter.js"></script>
+    <script src="scripts/directive.js"></script>
+    <script src="scripts/directive-sample.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+
+.tile {
+  border: 2px solid gray;
+}
+
+.tile-item:first-child {
+  border-top: none;
+}
+
+.tile-item {
+  border-top: 2px solid gray;
+  padding: 5px;
+}
+
+.item-name {
+  font-size: 110%;
+  font-weight: bold;
+}
+
+.item-sub-price {
+  font-size: 70%;
+  font-weight: none;
+}
+
+.total {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 100%;
+}
+
+.total-price {
+  font-size: 150%;
+  color: rgb(240, 80, 80);
+}
+
+.debug-json {
+  margin-top: 20px;
+  font-size: 8pt;
+  color: gray;
+}

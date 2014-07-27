@@ -1,0 +1,30 @@
+<!doctype html>
+<html ng-app="angular-sample">
+  <head>
+    <meta charset="utf-8">
+    <title>angular-sample</title>
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body ng-controller="mainController">
+
+    <div class="tile">
+      <div class="tile-item" ng-repeat="item in items">
+        <div class="item-name">{{item.name}}<span class="item-sub-price">（{{item.price | money}}）</span></div>
+        数量：<input type="text" name="amount" ng-model="item.amount">
+        <div id="total_price" ng-model="item.totalPrice">金額（税込）：{{item.amount * item.price | calcTax | money}}</div> <!-- calcTaxで消費税計算 -->
+      </div>
+    </div>
+    
+    <div class="total">
+      合計金額：<span class="total-price">{{totalPrice | money}}</span>
+    </div>
+    
+    <input type="submit" value="Order!!">
+    
+    <div class="debug-json">{{items | json}}</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/filter.js"></script>
+    <script src="scripts/data-binding-sample.js"></script>
+</body>
+</html>
